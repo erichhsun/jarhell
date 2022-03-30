@@ -16,6 +16,7 @@
 
   <properties>
     <azure-storage-blob.sdk.version>12.14.2</azure-storage-blob.sdk.version>
+    <jackson.version>2.12.5</jackson.version>
   </properties>
 
   <dependencies>
@@ -29,6 +30,13 @@
       <groupId>com.azure</groupId>
       <artifactId>azure-storage-blob</artifactId>
       <version>${azure-storage-blob.sdk.version}</version>
+    </dependency>
+
+    <!-- Step 1: Try replacing the afterburner module... -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.module</groupId>
+      <artifactId>jackson-module-afterburner</artifactId>
+      <version>${jackson.version}</version>
     </dependency>
 
     <dependency>
