@@ -32,10 +32,28 @@
       <version>${azure-storage-blob.sdk.version}</version>
     </dependency>
 
+    <!-- Do ourselves a favor and explicitly define the jackson libraries we want to use -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
     <!-- Step 1: Try replacing the afterburner module... -->
     <dependency>
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-afterburner</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!--
+    Step 2: Try replacing the guava module
+
+    Fortunately this works, but imagine that we brought in a new version of a guava module
+    -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-guava</artifactId>
       <version>${jackson.version}</version>
     </dependency>
 
