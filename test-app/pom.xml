@@ -15,11 +15,12 @@
   <name>test-app</name>
 
   <properties>
+    <azure-storage-blob.sdk.version>12.14.2</azure-storage-blob.sdk.version>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>com.github</groupId>
+      <groupId>${groupId}</groupId>
       <artifactId>egg</artifactId>
       <version>${version}</version>
     </dependency>
